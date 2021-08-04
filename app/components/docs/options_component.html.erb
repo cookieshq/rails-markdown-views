@@ -1,0 +1,10 @@
+<% items.each do |item| %>
+  <%= item %>
+<% end %>
+<dl>  
+  <dt><%= @name %></dt>
+  <dd><%= @type %></dd>
+  <dd>
+    <%= content? ? content : @description %>
+  </dd>
+</dl>
