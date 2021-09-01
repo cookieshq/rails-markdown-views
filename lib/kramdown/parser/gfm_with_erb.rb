@@ -23,8 +23,11 @@ class Kramdown::Parser::GfmWithErb < Kramdown::Parser::GFM
     @src.pos += @src.matched_size
     @tree.children << Element.new(:raw, @src.matched)
   end
-  # TODO: Check why this sometimes throw an exception after a few page reloads
-  # may be due to the code of the class being reloaded
-  define_parser(:erb_tags, ERB_TAGS_START, '<%')
+  
+  # Reloading seems to make the parser get re-registered while already defined
+  # so putting a little check ahead of the registration
+  unless has_parser?(:erb_tags)
+    define_parser(:erb_tags, ERB_TAGS_START, '<%')
+  end
 
 end
