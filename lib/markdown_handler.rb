@@ -1,13 +1,11 @@
 # Based on https://www.lugolabs.com/articles/render-markdown-views-with-redcarpet-and-pygment-in-rails
 require 'kramdown'
-require 'kramdown-parser-gfm'
-require 'rouge'
 
 class MarkdownHandler
   class << self
     def call(template, source)
       html = render(source)
-      result = erb.call(template, html)
+      erb.call(template, html)
     end
 
     def render(text)
