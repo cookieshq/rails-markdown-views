@@ -1,0 +1,38 @@
+<style>
+  .docs-example-code {
+    display: grid;
+    color: #f8fafc;
+    background-color: #122b3b;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  .docs-example-code__language {
+    text-transform: uppercase;
+    font-family: sans-serif;
+    border-bottom: solid 1px #f8fafc33;
+    border-left: solid 1px #f8fafc33;
+    align-self: start;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .docs-example-code pre {
+    padding: 1rem;
+    overflow: auto;
+    margin: 0;
+  }
+
+  .highlight {
+    color: inherit;
+    background-color:inherit;
+  }
+</style>
+<div class="docs-example-code">
+  <%= content %>
+  <% if @language %>
+    <div class="docs-example-code__language">
+      <%= @language %>
+    </div>
+  <% end %>
+</div>

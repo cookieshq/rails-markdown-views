@@ -34,9 +34,7 @@ Block level markdown needs to be starting within 0-3 space of the start of the l
     This'll show the result of the evaluated code
   <% end %>
   <% example.code do %>
-    <pre class="highlight">
-      Place the code that generates the content here
-    </pre>
+    <pre class="highlight">Place the code that generates the content here</pre>
   <% end %>
 <% end %>
 ```

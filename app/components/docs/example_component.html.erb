@@ -2,10 +2,6 @@
   <style>
     <%= Rouge::Themes::ThankfulEyes.render %>
 
-    .highlight {
-      color: #f8fafc;
-    }
-
     .docs-example {
       border: solid 1px #CBD5E1;
       color: #334155;
@@ -18,17 +14,9 @@
     .docs-example-output {
       padding: 2rem;
     }
-
-    .docs-example-code pre {
-      padding: 1rem;
-      overflow: auto;
-      margin: 0;
-    }
   </style>
   <div class="docs-example-output">
     <%= output %>
   </div>
-  <div class="docs-example-code">
-    <%= code %>
-  </div>
+  <%= code %>
 </div>
