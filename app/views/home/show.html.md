@@ -5,6 +5,12 @@ I'm not sure why a `<br>` gets there though
 
 Another paragraph
 
+<%= tag.div do %>
+  <%= tag.p do %>
+    <%= "Hello from ERB" %>
+  <% end %>
+<% end %>
+
 ## API <%= "with inline ERB" %>
 
 <%= render Docs::OptionsComponent.new do |options| %>
