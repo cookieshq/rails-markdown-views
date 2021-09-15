@@ -1,3 +1,5 @@
+require 'kramdown-parser-gfm'
+
 # Following the example from Kramdown's Parser documentation
 # https://kramdown.gettalong.org/rdoc/Kramdown/Parser/Kramdown.html
 class Kramdown::Parser::GfmWithErb < Kramdown::Parser::GFM

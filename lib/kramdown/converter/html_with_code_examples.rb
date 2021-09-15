@@ -1,3 +1,5 @@
+require 'kramdown'
+
 module Kramdown
   module Converter
     class HtmlWithCodeExamples < Html
