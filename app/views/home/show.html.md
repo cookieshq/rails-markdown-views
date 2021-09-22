@@ -40,11 +40,8 @@ Block level markdown needs to be starting within 0-3 space of the start of the l
 ```
 {:example="true"}
 
-<%= render Docs::ExampleComponent.new do |example| %>
-  <% example.output do %>
-    <%= render example_partial %>
-  <% end %>
-  <% example.code_sample(language: 'erb'){sample} %>
-<% end %>
-
 <%= render Docs::ExampleFromPartialComponent.new('home/examples/example1') %>
+
+<%= render Docs::ExampleFromPublicComponent.new(file: 'example1') %>
+
+<%= render inline: @inline_template %>

@@ -26,6 +26,17 @@ class Docs::ExampleFromPartialComponent < ViewComponent::Base
   end
 
   def code_sample
-    render file: partial_full_path
-  end 
+    tag.pre{render file: partial_full_path}
+  end
+
+  def code_sample_options
+    {language: language}
+  end
+
+  def call
+    render Docs::ExampleComponent.new do |example|
+      example.output{output}
+      example.code_sample(code_sample_options){code_sample}
+    end
+  end
 end

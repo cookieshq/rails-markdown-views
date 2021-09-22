@@ -1,3 +1,5 @@
 class HomeController < ApplicationController
-  def show; end
+  def show
+    @inline_template = '<%= "Hello World" %>'
+  end
 end
