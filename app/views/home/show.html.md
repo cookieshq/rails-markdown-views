@@ -33,9 +33,18 @@ Block level markdown needs to be starting within 0-3 space of the start of the l
   <% example.output do %>
     This'll show the result of the evaluated code
   <% end %>
-  <% example.code do %>
+  <% example.code_sample do %>
     <pre class="highlight">Place the code that generates the content here</pre>
   <% end %>
 <% end %>
 ```
 {:example="true"}
+
+<%= render Docs::ExampleComponent.new do |example| %>
+  <% example.output do %>
+    <%= render example_partial %>
+  <% end %>
+  <% example.code_sample(language: 'erb'){sample} %>
+<% end %>
+
+<%= render Docs::ExampleFromPartialComponent.new('home/examples/example1') %>

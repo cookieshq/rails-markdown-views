@@ -18,5 +18,7 @@
   <div class="docs-example-output">
     <%= output %>
   </div>
-  <%= code %>
+  <% code_samples.each do |code_sample| %>
+    <%= code_sample %>
+  <% end %>
 </div>

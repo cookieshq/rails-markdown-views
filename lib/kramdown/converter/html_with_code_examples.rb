@@ -21,7 +21,7 @@ module Kramdown
           <% example.output do %>
             #{el.value}
           <% end %>
-          <% example.code(language: #{el.options.dig(:lang).inspect}) do %>
+          <% example.code_sample(language: #{el.options.dig(:lang).inspect}) do %>
             #{converted}
           <% end %>
         <% end %>

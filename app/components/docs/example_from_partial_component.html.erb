@@ -1,0 +1,4 @@
+<%= render Docs::ExampleComponent.new do |example| %>
+  <% example.output{output} %>
+  <% example.code_sample(language: language){code_sample} %>
+<% end %>
